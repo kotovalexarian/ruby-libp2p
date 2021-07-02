@@ -2,16 +2,16 @@
 
 require 'bundler/gem_tasks'
 
-CLEAN << 'spec/examples.txt'
+CLEAN << '.yardoc'
 CLEAN << 'coverage'
 CLEAN << 'doc'
-CLEAN << '.yardoc'
+CLEAN << 'spec/examples.txt'
 
-desc 'Run all checks'
-task all: %i[default audit]
+desc 'Run all checks (slow; for CI)'
+task all: %i[test lint bundler:audit]
 
-desc 'Run default checks'
-task default: %i[test lint]
+desc 'Run default checks (fast; for development)'
+task default: %i[test lint audit]
 
 desc 'Run tests'
 task test: :spec
@@ -23,7 +23,7 @@ desc 'Fix code style (rubocop --auto-correct)'
 task fix: 'rubocop:auto_correct'
 
 desc 'Run security audit'
-task audit: 'bundler:audit'
+task audit: 'bundler:audit:check'
 
 begin
   require 'rspec/core/rake_task'
