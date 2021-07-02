@@ -19,6 +19,9 @@ module Libp2p
 
           def verify(message, signature)
             @lib_ed25519_verify_key.verify signature, message
+            true
+          rescue ::Ed25519::VerifyError
+            false
           end
         end
       end
