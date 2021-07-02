@@ -34,7 +34,14 @@ Gem::Specification.new do |spec|
 
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename f }
 
-  spec.add_development_dependency 'bundler', '~> 2.2'
-  spec.add_development_dependency 'pry',     '~> 0.14.0'
-  spec.add_development_dependency 'rake',    '~> 13.0'
+  spec.add_development_dependency 'bundler',             '~> 2.2'
+  spec.add_development_dependency 'pry',                 '~> 0.14'
+  spec.add_development_dependency 'rake',                '~> 13.0'
+  spec.add_development_dependency 'rspec',               '~> 3.10'
+  spec.add_development_dependency 'rubocop',             '~> 1.14'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.11'
+  spec.add_development_dependency 'rubocop-rake',        '~> 0.5'
+  spec.add_development_dependency 'rubocop-rspec',       '~> 2.3'
+  spec.add_development_dependency 'simplecov',           '~> 0.21'
+  spec.add_development_dependency 'yard',                '~> 0.9'
 end
