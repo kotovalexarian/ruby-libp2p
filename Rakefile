@@ -7,6 +7,9 @@ CLEAN << 'coverage'
 CLEAN << 'doc'
 CLEAN << '.yardoc'
 
+desc 'Run all checks'
+task all: %i[default audit]
+
 desc 'Run default checks'
 task default: %i[test lint]
 
@@ -18,6 +21,9 @@ task lint: :rubocop
 
 desc 'Fix code style (rubocop --auto-correct)'
 task fix: 'rubocop:auto_correct'
+
+desc 'Run security audit'
+task audit: 'bundler:audit'
 
 begin
   require 'rspec/core/rake_task'
