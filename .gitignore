@@ -2,14 +2,18 @@
 *.rbc
 
 /.config
+/.rake_tasks~
 /coverage/
 /InstalledFiles
 /pkg/
-/spec/reports/
+/tmp/
+
+# RSpec configuration and generated files.
+/.rspec
 /spec/examples.txt
+/spec/reports/
 /test/tmp/
 /test/version_tmp/
-/tmp/
 
 # Used by dotenv library to load environment variables.
 /.env
