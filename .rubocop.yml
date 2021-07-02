@@ -33,9 +33,6 @@ RSpec/ContextWording:
 RSpec/ExampleLength:
   CountAsOne: ['array', 'hash', 'heredoc']
 
-RSpec/MultipleMemoizedHelpers:
-  Max: 6
-
 Style/AndOr:
   EnforcedStyle: conditionals
 
