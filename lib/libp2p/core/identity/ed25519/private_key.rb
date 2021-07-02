@@ -21,9 +21,7 @@ module Libp2p
             @lib_ed25519_signing_key = lib_ed25519_signing_key
           end
 
-          def public_key
-            PublicKey.new @lib_ed25519_signing_key.verify_key
-          end
+          def public_key = PublicKey.new(@lib_ed25519_signing_key.verify_key)
 
           def sign(message)
             @lib_ed25519_signing_key.sign message
