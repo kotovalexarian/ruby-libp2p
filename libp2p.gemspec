@@ -45,4 +45,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-rspec',       '~> 2.3'
   spec.add_development_dependency 'simplecov',           '~> 0.21'
   spec.add_development_dependency 'yard',                '~> 0.9'
+
+  spec.add_runtime_dependency 'bitcoin-secp256k1', '~> 0.5.0'
+  spec.add_runtime_dependency 'ed25519',           '~> 1.2'
 end

@@ -8,6 +8,9 @@ AllCops:
   DisplayCopNames: true
   NewCops: enable
 
+  Exclude:
+    - 'src/**/*'
+
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
